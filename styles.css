@@ -881,3 +881,67 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== GLOWING ECOSYSTEM MARQUEE TICKER ===== */
+.ecosystem-ticker-banner {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(2, 5, 13, 0.95);
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 14px 0;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.08);
+  margin-bottom: 20px;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--text-pure);
+  white-space: nowrap;
+}
+
+.cyan-glow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-accent);
+  box-shadow: 0 0 10px var(--text-accent);
+  display: inline-block;
+}
+
+.gold-glow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f7b731;
+  box-shadow: 0 0 10px #f7b731;
+  display: inline-block;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
