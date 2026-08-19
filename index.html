@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVIRAMA — High-Potential Winning Products Showcase</title>
+  <meta name="description" content="Katalog Resmi PT Avirama Eskalasi Niaga: Ecosystem Builder &amp; Winning Products Showcase (Essen Ikan &amp; Golok Tempa)" />
+  
+  <!-- Fonts: Google Poppins & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'bg-deep-void': '#02050d',
+            'bg-dark-abyss': '#050d1a',
+            'cyan-accent': '#00f0ff',
+            'cyan-glow': 'rgba(0, 240, 255, 0.4)',
+            'sand-btn': '#deb883',
+            'card-bg': 'rgba(7, 16, 34, 0.8)'
+          },
+          fontFamily: {
+            'heading': ['Poppins', 'sans-serif'],
+            'body': ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for Cyan Mist Atmosphere, Champagne Buttons, and Motion Styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-body text-slate-200 antialiased selection:bg-cyan-accent selection:text-black">
+
+  <!-- Atmospheric Cyan Mist Background (Image 2 Replica) -->
+  <div class="mist-background"></div>
+  <div class="grain-overlay"></div>
+  <div class="cyber-scanline"></div>
+
+  <!-- Top Navigation (Single Solid Brand & Spacious Layout) -->
+  <header class="nav-header" id="mainHeader">
+    <div class="wrap">
+      <div class="nav-container">
+        <div class="brand-logo">
+          AVIRAMA
+        </div>
+        <nav class="nav-center-menu">
+          <a href="#essen-section" class="nav-link">Essen Ikan</a>
+          <a href="#golok-section" class="nav-link">Golok Tempa</a>
+        </nav>
+        <div class="nav-right-box">
+          <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20tertarik%20dengan%20katalog%20produk%20Avirama" target="_blank" rel="noopener" class="btn-sand-cart" style="padding: 8px 18px; font-size: 0.8rem;">
+            <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-wordmark-bg" id="heroWordmark">AVIRAMA</div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy-box">
+        <span class="hero-tag" id="heroBadge">
+          <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          Ecosystem &amp; Retail Builder • PT Avirama Eskalasi Niaga
+        </span>
+        <h1 class="hero-title" id="heroTitle">We Build &amp; Scale<br><span class="cyan-gradient-text">High-Potential Products</span></h1>
+        <p class="hero-desc" id="heroDesc">PT Avirama Eskalasi Niaga beroperasi dengan model Ecosystem Builder. Kami menguji dan menjual produk-produk dengan potensi pasar tinggi dan perputaran cepat. Saat ini, pertumbuhan kami dipimpin oleh <strong>2 Winning Engine Terbukti</strong>: formula <strong>Essen Pancing Ikan</strong> (D2C) &amp; rantai pasok <strong>Golok Tempa Tradisional</strong> (B2B).</p>
+        
+        <!-- Dual Engine Cards from Slide 5 -->
+        <div class="hero-dual-engine" id="heroEngineCards">
+          <div class="engine-card">
+            <span class="engine-badge">Winning Engine 01 • D2C Retail</span>
+            <div class="engine-title">Essen Pancing Ikan</div>
+            <div class="engine-sub">Formula Bio-Aromatik Lele &amp; Mas</div>
+          </div>
+          <div class="engine-card">
+            <span class="engine-badge">Winning Engine 02 • B2B Supply</span>
+            <div class="engine-title">Golok Tempa Master</div>
+            <div class="engine-sub">100% Baja Per Sepuh Pengrajin</div>
+          </div>
+        </div>
+
+        <div id="heroCTA">
+          <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20konsultasi%20order%20Essen%20Ikan%20dan%20Golok%20Avirama" target="_blank" rel="noopener" class="btn-sand-cart large">
+            <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Add to cart • Order Sekarang
+          </a>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- HERO AUTO-SLIDING CAROUSEL (FOTO GEDE JALAN SENDIRI)   -->
+      <!-- ======================================================= -->
+      <div class="hero-slider-showcase" id="heroSlider">
+        <div class="slider-viewport">
+          <div class="slider-track" id="sliderTrack">
+            
+            <!-- Slide 1: Pandhega Pattimura -->
+            <div class="slide-item active">
+              <img src="images/Pattimuraa_Avirama.jpg" alt="Golok Pandhega Pattimura 40cm">
+              <div class="slide-caption-bar">
+                <div class="slide-caption-text">
+                  <h4>Pandhega Pattimura 40cm</h4>
+                  <span>Golok Tebas Kebun &amp; Bambu</span>
+                </div>
+                <span class="slide-tag">Rp 395.000</span>
+              </div>
+            </div>
+
+            <!-- Slide 2: Essen Megalodon -->
+            <div class="slide-item">
+              <img src="images/Foto_Produk_Essen_Megalodon.png" alt="Essen Megalodon Super Strike">
+              <div class="slide-caption-bar">
+                <div class="slide-caption-text">
+                  <h4>Essen Megalodon Strike</h4>
+                  <span>Formula Pemikat Predator Segala Ikan</span>
+                </div>
+                <span class="slide-tag">Rp 79.000</span>
+              </div>
+            </div>
+
+            <!-- Slide 3: Sembelih Aguna -->
+            <div class="slide-item">
+              <img src="images/Sembelih_Aguna_-_1.jpg" alt="Golok Sembelih Aguna 30cm">
+              <div class="slide-caption-bar">
+                <div class="slide-caption-text">
+                  <h4>Sembelih Aguna 30cm</h4>
+                  <span>Razor Sharp Qurban &amp; Jagal Daging</span>
+                </div>
+                <span class="slide-tag">Rp 375.000</span>
+              </div>
+            </div>
+
+            <!-- Slide 4: Boom Essen Lele -->
+            <div class="slide-item">
+              <img src="images/boom-lele-30.jpg" alt="Boom Essen Ikan Lele 30ml">
+              <div class="slide-caption-bar">
+                <div class="slide-caption-text">
+                  <h4>Boom Essen Ikan Lele</h4>
+                  <span>Formula Amis Gurih Galatama</span>
+                </div>
+                <span class="slide-tag">Rp 79.000</span>
+              </div>
+            </div>
+
+            <!-- Slide 5: Mandau Jati Barata -->
+            <div class="slide-item">
+              <img src="images/Mandau_Jati_Barata_Cropped.jpg" alt="Golok Mandau Jati Barata">
+              <div class="slide-caption-bar">
+                <div class="slide-caption-text">
+                  <h4>Mandau Jati Barata</h4>
+                  <span>Bilah Eksotik Dayak &amp; Survival</span>
+                </div>
+                <span class="slide-tag">Rp 399.000</span>
+              </div>
+            </div>
+
+            <!-- Slide 6: Monster Tegang Lele 60ml -->
+            <div class="slide-item">
+              <img src="images/ref_monster.png" alt="Monster Tegang Lele 60ml">
+              <div class="slide-caption-bar">
+                <div class="slide-caption-text">
+                  <h4>Monster Tegang Lele 60ml</h4>
+                  <span>Kemasan Jumbo 2x Lebih Hemat</span>
+                </div>
+                <span class="slide-tag">Rp 99.000</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <div class="slider-dots" id="sliderDots">
+            <div class="slider-dot active" onclick="goToSlide(0)"></div>
+            <div class="slider-dot" onclick="goToSlide(1)"></div>
+            <div class="slider-dot" onclick="goToSlide(2)"></div>
+            <div class="slider-dot" onclick="goToSlide(3)"></div>
+            <div class="slider-dot" onclick="goToSlide(4)"></div>
+            <div class="slider-dot" onclick="goToSlide(5)"></div>
+          </div>
+          <div class="slider-nav-btns">
+            <button class="slider-arrow-btn" onclick="prevSlide()" aria-label="Previous Slide">‹</button>
+            <button class="slider-arrow-btn" onclick="nextSlide()" aria-label="Next Slide">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar Section -->
+  <section class="filter-bar-section" id="filterBarSection">
+    <div class="wrap">
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">ALL COLLECTIONS</button>
+        <button class="filter-btn" onclick="filterCategory('essen', this)">ESSEN PANCING IKAN</button>
+        <button class="filter-btn" onclick="filterCategory('golok', this)">GOLOK TEMPA MASTER</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= -->
+  <!-- SECTION 1: ESSEN PANCING IKAN (100% FOTO ASLI FINDER)   -->
+  <!-- ======================================================= -->
+  <section id="essen-section" class="catalog-section category-group" data-category="essen">
+    <div class="wrap">
+      <div class="section-headline-box">
+        <div>
+          <span class="section-label">
+            <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            Winning Engine 01 • D2C Retail Avirama
+          </span>
+          <h2>Koleksi Essen Pancing Ikan</h2>
+        </div>
+        <div class="section-badge-pill">Formula Bio-Aromatik 30ml &amp; 60ml</div>
+      </div>
+
+      <div class="products-master-grid">
+
+        <!-- Essen 1: Boom Essen Ikan Lele 30ml -->
+        <article class="product-card">
+          <div class="product-media-frame">
+            <span class="product-chip gold">LELE SPECIALIST</span>
+            <img src="images/boom-lele-30.jpg" alt="Boom Essen Ikan Lele 30ml" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">30 ML • KHUSUS IKAN LELE</span>
+            <h3 class="product-title">Boom Essen Ikan Lele 30ml</h3>
+            <p class="product-description">Formula konsentrat aroma amis menyengat yang disukai ikan lele kolam harian dan galatama lomba.</p>
+            <div class="product-specs-chips">
+              <span>Target: Ikan Lele</span>
+              <span>Aroma Tahan 8 Jam</span>
+              <span>Media Pelet &amp; Olahan</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 95.000</span>
+                <span class="price-active-val">Rp 79.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Boom%20Essen%20Ikan%20Lele%2030ml" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Essen 2: X-Treme Essen Ikan Lele 30ml -->
+        <article class="product-card">
+          <div class="product-media-frame">
+            <span class="product-chip">EXTRA STRIKE</span>
+            <img src="images/xtreme-lele-30.jpg" alt="X-Treme Essen Ikan Lele 30ml" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">30 ML • LELE KOMPETISI</span>
+            <h3 class="product-title">X-Treme Essen Lele 30ml</h3>
+            <p class="product-description">Grade tertinggi untuk memicu insting makan lele babon di air dingin, keruh, maupun air hijau berlumut.</p>
+            <div class="product-specs-chips">
+              <span>Target: Lele Babon</span>
+              <span>Difusi Cepat</span>
+              <span>Anti Zonk</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 95.000</span>
+                <span class="price-active-val">Rp 79.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20X-Treme%20Essen%20Ikan%20Lele%2030ml" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Essen 3: Boom Essen Ikan Mas 30ml -->
+        <article class="product-card">
+          <div class="product-media-frame">
+            <span class="product-chip gold">GOLD CARP FORMULA</span>
+            <img src="images/ref_power.png" alt="Boom Essen Ikan Mas 30ml" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">30 ML • GURIH WANGI</span>
+            <h3 class="product-title">Boom Essen Ikan Mas 30ml</h3>
+            <p class="product-description">Kombinasi aroma buah harum manis gurih yang terbukti ampuh untuk ikan mas rame dan mas babon kilo gebrus.</p>
+            <div class="product-specs-chips">
+              <span>Target: Ikan Mas</span>
+              <span>Umpan Putih &amp; Kuning</span>
+              <span>Kilo Gebrus</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 95.000</span>
+                <span class="price-active-val">Rp 79.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Boom%20Essen%20Ikan%20Mas%2030ml" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Essen 4: Essen Megalodon Super Strike -->
+        <article class="product-card">
+          <div class="product-media-frame">
+            <span class="product-chip red">PREDATOR BOOSTER</span>
+            <img src="images/Foto_Produk_Essen_Megalodon.png" alt="Essen Ikan Megalodon" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">30 ML • SUPER BOOSTER</span>
+            <h3 class="product-title">Essen Ikan Megalodon</h3>
+            <p class="product-description">Formula konsentrasi tinggi untuk mengumpulkan ikan di titik lapak memancing dalam hitungan menit.</p>
+            <div class="product-specs-chips">
+              <span>Target: Segala Ikan</span>
+              <span>Daya Pikat Jauh</span>
+              <span>Galatama &amp; Liar</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 110.000</span>
+                <span class="price-active-val">Rp 79.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Essen%20Ikan%20Megalodon" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Essen 5: Monster Tegang Ikan Lele 60ml -->
+        <article class="product-card">
+          <div class="product-media-frame">
+            <span class="product-chip gold">JUMBO 60ML</span>
+            <img src="images/ref_monster.png" alt="Monster Tegang Ikan Lele 60ml" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">60 ML • JUMBO PACK</span>
+            <h3 class="product-title">Monster Tegang Lele 60ml</h3>
+            <p class="product-description">Kemasan botol besar 60ml untuk pemancing rutin. Formula ekstra amis asam amino untuk ikan lele predator galatama.</p>
+            <div class="product-specs-chips">
+              <span>Isi 60ml Jumbo</span>
+              <span>Target: Lele Babon</span>
+              <span>Hemat 40%</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 135.000</span>
+                <span class="price-active-val">Rp 99.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Monster%20Tegang%20Lele%2060ml" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Essen 6: Boom Essen Ikan Lele 60ml -->
+        <article class="product-card">
+          <div class="product-media-frame">
+            <span class="product-chip">JUMBO 60ML</span>
+            <img src="images/ref_60ml.png" alt="Boom Essen Ikan Lele 60ml" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">60 ML • BOTOL EKONOMIS</span>
+            <h3 class="product-title">Boom Essen Lele 60ml</h3>
+            <p class="product-description">Versi 60ml isi 2x lipat lebih banyak untuk pemakaian rutin mancing ikan lele di kolam pemancingan harian.</p>
+            <div class="product-specs-chips">
+              <span>Isi 60ml</span>
+              <span>Target: Ikan Lele</span>
+              <span>Aroma Stabil</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 135.000</span>
+                <span class="price-active-val">Rp 99.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Boom%20Essen%20Lele%2060ml" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= -->
+  <!-- SECTION 2: GOLOK TEMPA MASTER (100% FOTO ASLI FINDER)   -->
+  <!-- ======================================================= -->
+  <section id="golok-section" class="catalog-section category-group" data-category="golok">
+    <div class="wrap">
+      <div class="section-headline-box">
+        <div>
+          <span class="section-label">
+            <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            Winning Engine 02 • B2B Supply Chain Mitra
+          </span>
+          <h2>Koleksi Golok Tempa Master</h2>
+        </div>
+        <div class="section-badge-pill">100% Baja Per Sepuhan Tempa Tradisional</div>
+      </div>
+
+      <div class="products-master-grid golok-master-grid">
+
+        <!-- Golok 1: Pandhega Pattimura -->
+        <article class="product-card">
+          <div class="product-media-frame golok-frame">
+            <span class="product-chip gold">HEAVY DUTY CHOPPING</span>
+            <img src="images/Pattimuraa_Avirama.jpg" alt="Golok Pandhega Pattimura 40cm" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">PANJANG BILAH 40 CM • BAJA PER SEPUH</span>
+            <h3 class="product-title">Pandhega Pattimura 40cm</h3>
+            <p class="product-description">Bilah tebal 4mm, gagang & sarung kayu Johar + Sonokeling anti-slip. Didesain tangguh untuk tebas dahan dan bambu.</p>
+            <div class="product-specs-chips">
+              <span>Bilah 40cm</span>
+              <span>Tebal 4mm</span>
+              <span>Kayu Johar &amp; Sonokeling</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 400.000</span>
+                <span class="price-active-val">Rp 395.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Golok%20Pandhega%20Pattimura%2040cm" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golok 2: Sembelih Aguna -->
+        <article class="product-card">
+          <div class="product-media-frame golok-frame">
+            <span class="product-chip">RAZOR SHARP QURBAN</span>
+            <img src="images/Sembelih_Aguna_-_1.jpg" alt="Golok Sembelih Aguna 30cm" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">PANJANG BILAH 30 CM • RAZOR SHARP</span>
+            <h3 class="product-title">Sembelih Aguna 30cm</h3>
+            <p class="product-description">Bilah tajam siap pakai, tebal 5mm, full kayu Sonokeling dengan pin kuningan tembus anti-copot. Standar sembelih hewan Qurban & jagal.</p>
+            <div class="product-specs-chips">
+              <span>Bilah 30cm</span>
+              <span>Tebal 5mm</span>
+              <span>Pin Kuningan Anti-Copot</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 400.000</span>
+                <span class="price-active-val">Rp 375.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Golok%20Sembelih%20Aguna%2030cm" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golok 3: Mandau Jati Barata -->
+        <article class="product-card">
+          <div class="product-media-frame golok-frame">
+            <span class="product-chip gold">DAYAK HERITAGE</span>
+            <img src="images/Mandau_Jati_Barata_Cropped.jpg" alt="Golok Mandau Jati Barata" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">SURVIVAL &amp; KOLEKSI</span>
+            <h3 class="product-title">Mandau Jati Barata</h3>
+            <p class="product-description">Bilah eksotik etnik Dayak dengan ukiran artistik pada sarung kayu Jati, seimbang untuk survival outdoor dan display.</p>
+            <div class="product-specs-chips">
+              <span>Bilah 40cm</span>
+              <span>Kayu Jati Berukir</span>
+              <span>Bilah Koleksi</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 450.000</span>
+                <span class="price-active-val">Rp 399.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Golok%20Mandau%20Jati%20Barata" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golok 4: Sembelih Anagata Kulit -->
+        <article class="product-card">
+          <div class="product-media-frame golok-frame">
+            <span class="product-chip">PRECISION SKINNING</span>
+            <img src="images/Sembelih_Anagata_Kulit.JPG" alt="Sembelih Anagata Kulit" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">FILLET &amp; SISIT HEWAN</span>
+            <h3 class="product-title">Sembelih Anagata Kulit</h3>
+            <p class="product-description">Bilah ramping tajam untuk penyesetan kulit hewan tanpa merusak daging. Dilengkapi sarung kulit asli premium.</p>
+            <div class="product-specs-chips">
+              <span>Bilah 25cm</span>
+              <span>Sarung Kulit Asli</span>
+              <span>Super Tajam</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 350.000</span>
+                <span class="price-active-val">Rp 295.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Golok%20Sembelih%20Anagata%20Kulit" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golok 5: Kopak Rawing Perkasa -->
+        <article class="product-card">
+          <div class="product-media-frame golok-frame">
+            <span class="product-chip red">HEAVY CHOPPING</span>
+            <img src="images/Kopak_Rawing_Perkasa.JPG" alt="Kopak Rawing Perkasa" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">TEBAS KAYU GELONDONG</span>
+            <h3 class="product-title">Kopak Rawing Perkasa</h3>
+            <p class="product-description">Bobot mantap untuk membelah kayu keras, bambu tua, dan pekerjaan kebun berat. Baja per sepuh anti sompel.</p>
+            <div class="product-specs-chips">
+              <span>Bilah 35cm</span>
+              <span>Tebal 6mm</span>
+              <span>Heavy Duty</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 420.000</span>
+                <span class="price-active-val">Rp 385.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Golok%20Kopak%20Rawing%20Perkasa" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golok 6: Bungkuk Djaka -->
+        <article class="product-card">
+          <div class="product-media-frame golok-frame">
+            <span class="product-chip">TRADITIONAL SUNDA</span>
+            <img src="images/Bungkuk_Djaka.JPG" alt="Golok Bungkuk Djaka" class="product-real-img" loading="lazy">
+          </div>
+          <div class="product-info-body">
+            <span class="product-meta-tag">KLASIK TRADISIONAL</span>
+            <h3 class="product-title">Golok Bungkuk Djaka</h3>
+            <p class="product-description">Bentuk kurva khas Sunda untuk memotong rumput lebat dan semak kebun dengan ayunan ringan tanpa cepat lelah.</p>
+            <div class="product-specs-chips">
+              <span>Bilah 30cm</span>
+              <span>Ringan &amp; Presisi</span>
+              <span>Sonokeling</span>
+            </div>
+            <div class="product-card-footer">
+              <div class="price-container">
+                <span class="price-strike-val">Rp 320.000</span>
+                <span class="price-active-val">Rp 265.000</span>
+              </div>
+              <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Golok%20Bungkuk%20Djaka" target="_blank" rel="noopener" class="btn-sand-cart">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Future Vision Statement -->
+  <footer class="catalog-footer">
+    <div class="wrap">
+      <div class="footer-center-box">
+        
+        <!-- Big Bold Statement in English (Requested by User) -->
+        <div class="future-promise-banner">
+          <h3><strong>"We will discover more winning products."</strong></h3>
+          <p>Kami akan terus menguji, menemukan, dan mengembangkan produk winning potensial berikutnya.</p>
+        </div>
+
+        <span class="hero-tag">
+          <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Layanan Pemesanan Resmi
+        </span>
+        <h2>Order Essen Ikan &amp; Golok Tempa</h2>
+        <p class="footer-subtext">Hubungi admin WhatsApp resmi Avirama untuk cek ketersediaan stok real-time, diskon ongkir, dan opsi Bayar di Tempat (COD).</p>
+        
+        <div class="footer-action-row">
+          <a href="https://wa.me/6287782980769?text=Halo%20Admin%20Avirama,%20saya%20mau%20order%20Essen%20Ikan%20dan%20Golok%20Avirama" target="_blank" rel="noopener" class="btn-sand-cart large">
+            <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#3c2214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Add to cart • WhatsApp: +62 877-8298-0769
+          </a>
+        </div>
+
+        <!-- Clean Badges with Stitch Vector Cyan Icons -->
+        <div class="footer-badges-strip">
+          <div class="f-badge">
+            <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Pengiriman dari Jakarta
+          </div>
+          <div class="f-badge">
+            <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            Packing Double Wrap Aman
+          </div>
+          <div class="f-badge">
+            <svg class="stitch-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            Garansi 100% Sampai Tujuan
+          </div>
+        </div>
+
+        <div class="copyright-text">
+          © 2026 PT Avirama Eskalasi Niaga. NIB: 0907260107055 • NPWP: 1000000010275364. Seluruh hak cipta dilindungi undang-undang.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

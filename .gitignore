@@ -1,0 +1,6 @@
+.DS_Store
+.bgremove-venv/
+stitch_extracted/
+stitch_extracted_2/
+*.log
+__pycache__/
