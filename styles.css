@@ -881,3 +881,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.mandau-img {
+  object-position: center 65% !important;
+}
