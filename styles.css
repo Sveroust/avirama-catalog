@@ -252,9 +252,10 @@ a {
   margin-bottom: 26px;
 }
 
-.hero-dual-engine {
+.hero-dual-engine,
+.hero-triple-engine {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-bottom: 28px;
 }
@@ -874,7 +875,8 @@ a {
   .hero-section {
     padding: 30px 0;
   }
-  .hero-dual-engine {
+  .hero-dual-engine,
+  .hero-triple-engine {
     grid-template-columns: 1fr;
   }
   .products-master-grid {
@@ -943,5 +945,239 @@ a {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* ===== CABENYA BRAND FLAGSHIP EXTENSION ===== */
+:root {
+  --flame-accent: #ff472e;
+  --flame-glow: rgba(255, 71, 46, 0.45);
+  --flame-border: rgba(255, 71, 46, 0.35);
+  --flame-bg: rgba(255, 71, 46, 0.08);
+}
+
+.engine-card.engine-cabenya {
+  border-color: rgba(255, 71, 46, 0.35);
+  background: rgba(255, 71, 46, 0.06);
+}
+
+.engine-card.engine-cabenya:hover {
+  background: rgba(255, 71, 46, 0.12);
+  border-color: var(--flame-accent);
+  box-shadow: 0 10px 25px rgba(255, 71, 46, 0.25);
+}
+
+.engine-card.engine-cabenya .engine-badge {
+  color: #ff6b52;
+}
+
+.flame-glow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--flame-accent);
+  box-shadow: 0 0 10px var(--flame-accent);
+  display: inline-block;
+}
+
+/* Nav Flame Styling */
+.nav-link.nav-flame {
+  color: #ff765e;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link.nav-flame:hover {
+  color: #ffa392;
+}
+
+.nav-flame-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: rgba(255, 71, 46, 0.2);
+  color: #ff6b52;
+  border: 1px solid rgba(255, 71, 46, 0.45);
+  padding: 2px 7px;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+/* Cabenya Brand Editorial Banner Showcase */
+.cabenya-brand-feature {
+  background: linear-gradient(135deg, rgba(255, 71, 46, 0.09) 0%, rgba(7, 16, 34, 0.95) 60%, rgba(2, 5, 13, 0.98) 100%);
+  border: 1px solid rgba(255, 71, 46, 0.28);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  margin-bottom: 34px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 71, 46, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cabenya-brand-feature::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 71, 46, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cabenya-feature-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.cabenya-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cabenya-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 10px rgba(255, 71, 46, 0.35));
+}
+
+.cabenya-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-pure);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.cabenya-tagline strong {
+  color: #ff765e;
+}
+
+.cabenya-pillars-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.cabenya-pillar-item {
+  background: rgba(2, 5, 13, 0.65);
+  border: 1px solid rgba(255, 71, 46, 0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.cabenya-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ff765e;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cabenya-pillar-desc {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.cabenya-visual-showcase {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 71, 46, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  background: #000;
+}
+
+.cabenya-visual-showcase img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cabenya-visual-showcase:hover img {
+  transform: scale(1.025);
+}
+
+.cabenya-visual-overlay-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 5, 13, 0.9) 100%);
+  font-size: 0.76rem;
+  color: var(--text-lead);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabenya-badge-pill {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ff6b52;
+  background: rgba(255, 71, 46, 0.1);
+  border: 1px solid rgba(255, 71, 46, 0.35);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+}
+
+.cabenya-frame {
+  height: 250px;
+  background: #080304;
+}
+
+.product-card.cabenya-card:hover {
+  border-color: rgba(255, 91, 66, 0.6);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 71, 46, 0.25);
+}
+
+.product-meta-tag.flame {
+  color: #ff6b52;
+}
+
+.product-chip.flame {
+  color: #ff6b52;
+  border-color: rgba(255, 107, 82, 0.5);
+  background: rgba(255, 71, 46, 0.15);
+}
+
+.section-label.text-flame {
+  color: #ff6b52;
+}
+
+.stroke-flame {
+  stroke: #ff472e !important;
+}
+
+/* Responsive adjustment for Cabenya Feature */
+@media (max-width: 960px) {
+  .hero-triple-engine {
+    grid-template-columns: 1fr;
+  }
+  .cabenya-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cabenya-pillars-list {
+    grid-template-columns: 1fr;
   }
 }

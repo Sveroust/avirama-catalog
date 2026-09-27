@@ -113,10 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. HERO AUTO-SLIDER ENGINE
+  // 5. HERO AUTO-SLIDER ENGINE (DYNAMIC MULTI-BRAND SLIDER)
   let currentSlide = 0;
-  const totalSlides = 6;
   let sliderInterval = null;
+
+  function getTotalSlides() {
+    const slides = document.querySelectorAll('.slide-item');
+    return slides.length || 8;
+  }
 
   function updateSliderUI() {
     const track = document.getElementById('sliderTrack');
@@ -145,12 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.nextSlide = function() {
-    currentSlide = (currentSlide + 1) % totalSlides;
+    const total = getTotalSlides();
+    currentSlide = (currentSlide + 1) % total;
     updateSliderUI();
   };
 
   window.prevSlide = function() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    const total = getTotalSlides();
+    currentSlide = (currentSlide - 1 + total) % total;
     updateSliderUI();
   };
 
