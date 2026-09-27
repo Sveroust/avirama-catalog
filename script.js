@@ -251,4 +251,101 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 8. CABENYA INTERACTIVE GALLERY SLIDER (PHOTO SLIDE ENGINE)
+  let cabenyaCurrent = 0;
+  let cabenyaInterval = null;
+
+  function updateCabenyaSliderUI() {
+    const track = document.getElementById('cabenyaSliderTrack');
+    const thumbs = document.querySelectorAll('.cabenya-thumb');
+    const slides = document.querySelectorAll('.cabenya-slide');
+    
+    if (track) {
+      track.style.transform = 'translateX(-' + (cabenyaCurrent * 100) + '%)';
+    }
+    
+    slides.forEach((slide, idx) => {
+      if (idx === cabenyaCurrent) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    thumbs.forEach((thumb, idx) => {
+      if (idx === cabenyaCurrent) {
+        thumb.classList.add('active');
+        thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      } else {
+        thumb.classList.remove('active');
+      }
+    });
+  }
+
+  window.cabenyaNextSlide = function() {
+    const slides = document.querySelectorAll('.cabenya-slide');
+    if (slides.length === 0) return;
+    cabenyaCurrent = (cabenyaCurrent + 1) % slides.length;
+    updateCabenyaSliderUI();
+  };
+
+  window.cabenyaPrevSlide = function() {
+    const slides = document.querySelectorAll('.cabenya-slide');
+    if (slides.length === 0) return;
+    cabenyaCurrent = (cabenyaCurrent - 1 + slides.length) % slides.length;
+    updateCabenyaSliderUI();
+  };
+
+  window.cabenyaGoToSlide = function(index) {
+    cabenyaCurrent = index;
+    updateCabenyaSliderUI();
+    resetCabenyaAutoplay();
+  };
+
+  function startCabenyaAutoplay() {
+    const slides = document.querySelectorAll('.cabenya-slide');
+    if (!cabenyaInterval && slides.length > 1) {
+      cabenyaInterval = setInterval(window.cabenyaNextSlide, 3500);
+    }
+  }
+
+  function stopCabenyaAutoplay() {
+    if (cabenyaInterval) {
+      clearInterval(cabenyaInterval);
+      cabenyaInterval = null;
+    }
+  }
+
+  function resetCabenyaAutoplay() {
+    stopCabenyaAutoplay();
+    startCabenyaAutoplay();
+  }
+
+  const cabenyaViewport = document.getElementById('cabenyaSliderViewport');
+  if (cabenyaViewport) {
+    cabenyaViewport.addEventListener('mouseenter', stopCabenyaAutoplay);
+    cabenyaViewport.addEventListener('mouseleave', startCabenyaAutoplay);
+
+    // Touch Swipe Support for Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    cabenyaViewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopCabenyaAutoplay();
+    }, { passive: true });
+
+    cabenyaViewport.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 40) {
+        window.cabenyaNextSlide();
+      } else if (touchEndX - touchStartX > 40) {
+        window.cabenyaPrevSlide();
+      }
+      startCabenyaAutoplay();
+    }, { passive: true });
+  }
+
+  updateCabenyaSliderUI();
+  startCabenyaAutoplay();
 });
